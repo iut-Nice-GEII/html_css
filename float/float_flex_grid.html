@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 800px;
+            margin: auto;
+            background-color: azure;
+            color: azure;
+        }
+
+        .container {
+            background-color: beige;
+            /*min-height: 100vh;*/
+        }
+
+        .local_header,
+        .local_header:hover {
+            background-color: rgb(37, 164, 71);
+            height: 40px;
+            width: 250px;
+            font-size: normal;
+            padding: 5px;
+            margin: 5px auto;
+            margin-top: 20px;
+            ;
+        }
+
+        header {
+            height: 150px;
+            background-color: blueviolet;
+            color: azure;
+            text-align: center;
+            padding: 60px;
+            font-size: x-large;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            border-top: 1px solid red;
+            font-size: 0.6em;
+            margin: 30px auto;
+            text-align: center;
+            vertical-align: bottom;
+            padding: 1em;
+            color: dimgray;
+        }
+
+        .flexy {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .flexy main {
+            flex-basis: 100%;
+            background-color: darkgray;
+            padding: 1em 0.5em;
+            margin: 5px 0px;
+        }
+
+        .flexy section:first-of-type {
+            flex-basis: 45%;
+            background-color: rgb(124, 26, 26);
+            padding: 1em 0.5em;
+            margin: 0px 5px;
+        }
+
+        .flexy section:last-of-type {
+            flex-basis: 45%;
+            background-color: rgb(80, 21, 158);
+            padding: 1em 0.5em;
+            margin: 0px 5px;
+        }
+
+        .gridy {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                'dessus dessus'
+                'gauche droite';
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+
+        .gridy main {
+            grid-area: dessus;
+            background-color: darkgray;
+            padding: 1em 0.5em;
+        }
+
+        .gridy section:first-of-type {
+            grid-area: gauche;
+            background-color: rgb(124, 26, 26);
+            padding: 1em 0.5em;
+        }
+
+        .gridy section:last-of-type {
+            grid-area: droite;
+            background-color: rgb(80, 21, 158);
+            padding: 1em 0.5em;
+        }
+
+        .floaty {
+            margin: 1em auto;
+            overflow: auto;
+
+        }
+
+        section:hover,
+        main:hover,
+        .local_header:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 140, 186, 0.5);
+        }
+
+        header:hover {
+            color: bisque;
+            padding-top: 55px;
+            background-color: brown;
+        }
+
+        .floaty main {
+            background-color: darkgray;
+            padding: 1em 0.5em;
+        }
+
+        .floaty section:first-of-type {
+            float: left;
+            width: 48%;
+            background-color: rgb(124, 26, 26);
+            padding: 1em 0.5em;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .floaty section:last-of-type {
+            float: right;
+            width: 50%;
+            background-color: rgb(80, 21, 158);
+            padding: 1em 0.5em;
+            margin-top: 10px;
+        }
+
+        img:hover {
+            height: 180px;
+        }
+
+        #overflow_normal {
+            height: 150px;
+            color: cyan;
+        }
+
+        #overflow_auto {
+            height: 150px;
+            overflow: auto;
+        }
+
+        .gallery {
+            margin: 5px;
+            border: 1px solid #232020;
+            float: left;
+            width: 180px;
+        }
+
+        .gallery:hover {
+            border: 1px solid #777;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+            color: #777
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class=" container">
+        <header>
+            exemple de positionnement avec les 3 principaux types de positionnement
+        </header>
+        <header class="local_header">
+            utilisation de flex
+        </header>
+        <div class="flexy">
+            <main>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis natus magnam accusamus laboriosam
+                labore ipsa et. Minus eius iure, est tempore quae, itaque assumenda explicabo animi, odit alias
+                corrupti? Tenetur?
+            </main>
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+            </section>
+            <section>
+                <img style="float:left" src="images/bugs_bunny.png" alt="image bugs bunny" height="150px">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+            </section>
+        </div>
+        <header class="local_header">
+            utilisation de grid
+        </header>
+        <div class="gridy">
+            <main>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis natus magnam accusamus laboriosam
+                labore ipsa et. Minus eius iure, est tempore quae, itaque assumenda explicabo animi, odit alias
+                corrupti? Tenetur?
+            </main>
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+            </section>
+            <section>
+                <img style="float:left" src="images/bugs_bunny.png" alt="image bugs bunny" height="150px">
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+            </section>
+        </div>
+        <header class="local_header">
+            utilisation de float
+        </header>
+        <div class="floaty">
+
+            <main>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis natus magnam accusamus laboriosam
+                labore ipsa et. Minus eius iure, est tempore quae, itaque assumenda explicabo animi, odit alias
+                corrupti? Tenetur?
+            </main>
+            <section>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+            </section>
+            <section>
+                <img style="float:left" src="images/bugs_bunny.png" alt="image bugs bunny" height="150px">
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+            </section>
+        </div>
+        <header class="local_header">
+            overflow exemple
+        </header>
+
+        <div class="floaty">
+
+            <main>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis natus magnam accusamus laboriosam
+                labore ipsa et. Minus eius iure, est tempore quae, itaque assumenda explicabo animi, odit alias
+                corrupti? Tenetur?
+            </main>
+            <section id="overflow_auto">
+                <img style="float:left" src="images/bugs_bunny.png" alt="image bugs bunny" height="150px">
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+            </section>
+            <section id="overflow_normal">
+                <img style="float:left" src="images/bugs_bunny.png" alt="image bugs bunny" height="150px">
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error cupiditate dolore dicta obcaecati, alias
+                aliquam reiciendis repellendus quod molestias a enim totam aperiam distinctio, nisi officia nesciunt?
+                Molestias, reprehenderit reiciendis.
+            </section>
+        </div>
+        <header class="local_header">
+            float avec des images
+        </header>
+        <div style="overflow:auto">
+            <div class="gallery">
+                <a target="_blank" href="images/boreale.png">
+                    <img src="images/boreale.png" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="images/forest.png">
+                    <img src="images/forest.png" alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="images/lac.png">
+                    <img src="images/lac.png" alt="Northern Lights" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="images/boreale.png">
+                    <img src="images/boreale.png" alt="Mountains" width="600" height="400">
+                </a>
+                <div class="desc">Add a description of the image here</div>
+            </div>
+        </div>
+        <header class="local_header">
+            overflow aprés left...
+        </header>
+        <footer style="float:clear">
+            Et voila !
+        </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>

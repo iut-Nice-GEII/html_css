@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box
+}
+
+img {
+  border: 5px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 5px;
+
+}
+
+img:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 140, 186, 0.5);
+}
+
+.bunny {
+  height: 150px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+body {
+  width: 80%;
+  margin: 20px auto;
+  background-color: beige;
+}
+
+.box {
+  width: 25%;
+  /* Chaque boîte occupe 25% de la largeur */
+  min-height: 200px;
+  /* Hauteur minimale de 200px */
+  float: left;
+  /* Utilisation de float pour aligner les boîtes côte à côte */
+  background-color: #3498db;
+  /* Couleur de fond pour visualiser les boîtes */
+  box-sizing: border-box;
+  /* Inclure les bordures et le rembourrage dans la largeur/hauteur */
+  margin: 10px;
+  /* Marge entre les boîtes */
+}
+
+.floatbox {
+  border: 2px solid #242424;
+  margin: 10px;
+  padding: 10px;
+  background-color: aliceblue;
+  overflow: auto;
+  width: 100%
+}
+
+
+
+.item {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  background-color: rgb(156, 154, 152);
+}
+
+.content {
+  color: #242424;
+  background-color: #3dcf5b;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px;
+}

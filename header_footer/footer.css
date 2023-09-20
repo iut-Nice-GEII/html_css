@@ -8,18 +8,19 @@ li {
     margin: 0;
     padding: 0;
 }
+
 /* Pen-specific styles */
 * {
     box-sizing: border-box;
-  }
-   
-  
-  h1 {
+}
+
+
+h1 {
     font-size: 1.75rem;
     margin: 0 0 0.75rem 0;
-  }
-  
-  /* Pattern styles */
+}
+
+/* Pattern styles */
 
 /* Style de base */
 
@@ -44,6 +45,7 @@ nav a {
     text-decoration: none;
     color: #fff;
 }
+
 nav a:hover {
     color: #f36687;
 }
@@ -53,30 +55,34 @@ main {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-aside{
+
+aside {
     background-color: #f2f2f2;
-    margin: 20px 10px; 
+    margin: 20px 10px;
     text-align: center;
 }
 
 section {
     margin: 20px 10px;
     width: 100%;
-    display:flex;
+    display: flex;
 
 }
-article{
+
+article {
     width: 50%;
 }
+
 article>p {
     border: 1px solid #ddd;
     padding: 10px;
-    margin:0px 10px;
+    margin: 0px 10px;
     min-height: 50vh;
 }
-article>h2{
+
+article>h2 {
     text-align: center;
 }
 

@@ -1,0 +1,27 @@
+*{
+	box-sizing:border-box;
+}
+header,footer{
+	height: 50px;
+	background-color:#f0d995;
+	font-size: 1.5em;
+	border-radius: 10px;
+    text-align: center;
+}
+main { 
+   height:100%; width:100%;
+    overflow: hidden;
+}
+nav {
+	float: left;
+	width: 15%;
+}
+article { float:left; background-color:#b5ccf3;
+	margin: 1%;word-break: break-all;
+            width: 60%;
+}
+aside   { 	float: right;
+	 width: 20%;
+     background-color:#f1d9ec;
+	 margin: 10px;
+}

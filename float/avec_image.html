@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test float</title>
+    <link rel="stylesheet" href="avec_image.css">
+    <style>
+        div {
+            float: left;
+            padding: 15px;
+            margin: 10px;
+            border: 2px solid blue;
+            border-radius: 20px;
+        }
+
+        div:hover {
+            box-shadow: 0 0 10px 5px rgba(0, 140, 186, 0.5);
+        }
+
+        .div1 {
+            background: red;
+        }
+
+        .div2 {
+            background: yellow;
+        }
+
+        .div3 {
+            background: green;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .half {
+            float: left;
+            width: 45%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <img class="float_left bunny" src="images/bugs_bunny.png" alt="image bugs bunny" srcset="">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt odit voluptas in, libero quaerat quasi neque
+            veniam cumque! Fugit iste explicabo autem ea animi facere quis earum laboriosam at incidunt!</p>
+    </div>
+    <div>
+
+        <img src="https://www.tutorialspoint.com/green/images/logo.png" class="float_right logo" />
+        This is demo text. This is demo text.
+        This is demo text. This is demo text.
+        This is demo text. This is demo text.
+        This is demo text. This is demo text.
+        This is demo text. This is demo text.
+        This is demo text. This is demo text.
+        This is demo text. This is demo text.
+        This is demo text. This is demo text.
+
+    </div>
+    <div >
+        <div class="div1">Div 1</div>
+        <div class="div2">Div 2</div>
+        <div class="div3">Div 3</div>
+    </div>
+    <div style="width:100%">
+        <div class="half">Div 1</div>
+        <div class="half">Div 2</div>
+
+    </div>
+    <div style="padding:0px;margin:0">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+</body>
+
+</html>
